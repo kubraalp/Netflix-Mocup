@@ -2,13 +2,19 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 20%;
-  max-width: 200px;
+  width: 25%;
+  max-width: 300px;
+  cursor: pointer;
+  color: gray;
+
+&:hover{
+  color: white;
+}
 `;
 
 const Avatar = styled.img`
   width: 100%;
-  border-radius: 0.2 rem;
+  border-radius: 0.2rem;
 `;
 
 const Name = styled.h2`
@@ -32,10 +38,12 @@ function Profile(props) {
     setActiveProfile(profile);
     history.push("/home");
   };
-  <Card onClick={activeProfileHandler}>
-    <Avatar src={avatar} />
-    <Name>{name}</Name>
-  </Card>;
+  return (
+    <Card onClick={activeProfileHandler}>
+      <Avatar src={avatar} />
+      <Name>{name}</Name>
+    </Card>
+  );
 }
 
 export default Profile;

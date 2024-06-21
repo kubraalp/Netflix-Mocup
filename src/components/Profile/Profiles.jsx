@@ -5,11 +5,11 @@ import Profile from "./Profile";
 
 const ProfilesContainer = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 `;
 
-function Profiles() {
+function Profiles(props) {
   const [profiles] = useState(profilesData);
   const { setActiveProfile } = props;
   return (

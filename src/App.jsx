@@ -14,15 +14,15 @@ function App() {
         <Route exact path="/">
           <h1>Welcome to Netflix by Wit</h1>
         </Route>
-        <Route path="login">
+        <Route path="/login">
           <Header />
           <Login />
         </Route>
-        <Route path="welcome">
+        <Route path="/welcome">
           <Welcome setActiveProfile={setActiveProfile} />
         </Route>
-        <Route path="home">
-          <Header activeProfile={activeProfile}/>
+        <Route path="/home">
+          <Header activeProfile={activeProfile} />
           <Home activeProfile={activeProfile} />
         </Route>
       </Switch>
