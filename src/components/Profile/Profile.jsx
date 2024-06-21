@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -30,10 +30,8 @@ function Profile(props) {
   const history = useHistory();
   const activeProfileHandler = () => {
     setActiveProfile(profile);
-history.push("/home")
-
-
-  }
+    history.push("/home");
+  };
   <Card onClick={activeProfileHandler}>
     <Avatar src={avatar} />
     <Name>{name}</Name>
